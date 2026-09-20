@@ -4,111 +4,207 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AI Builder Search | Find the Best AI Website Builders</title>
-
-  <meta name="description" content="Compare AI website builders, AI website creators and AI website creation tools. Find the right AI website builder for your business.">
+  <title>AI Builder Search | Compare the Best AI Website Builders</title>
+  <meta name="description" content="Discover and compare AI website builders and AI-powered tools. AI Builder Search helps entrepreneurs, creators and small businesses find the right tools faster.">
 
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: #172033;
       background: #ffffff;
       line-height: 1.6;
     }
 
-    header {
-      border-bottom: 1px solid #e8e8e8;
-      padding: 20px 8%;
-      font-size: 22px;
-      font-weight: 700;
+    a {
+      text-decoration: none;
     }
 
-    header span {
-      color: #5b5bd6;
+    header {
+      border-bottom: 1px solid #e7eaf0;
+      background: #ffffff;
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      color: #172033;
+    }
+
+    .logo span {
+      color: #635bff;
+    }
+
+    nav a {
+      color: #4b5563;
+      margin-left: 25px;
+      font-size: 15px;
+      font-weight: 600;
     }
 
     .hero {
+      background: linear-gradient(135deg, #f7f7ff, #eef5ff);
       text-align: center;
-      padding: 90px 20px 70px;
-      background: #f7f8fc;
+      padding: 95px 24px;
     }
 
     .hero h1 {
-      font-size: 48px;
-      line-height: 1.15;
-      margin: 0 auto 20px;
       max-width: 850px;
+      margin: auto;
+      font-size: 52px;
+      line-height: 1.1;
+      color: #111827;
     }
 
     .hero p {
       max-width: 700px;
-      margin: 0 auto;
+      margin: 24px auto;
       font-size: 19px;
-      color: #5d6472;
+      color: #5b6474;
+    }
+
+    .button {
+      display: inline-block;
+      background: #635bff;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      margin-top: 10px;
     }
 
     .section {
-      max-width: 1050px;
+      max-width: 1180px;
       margin: auto;
-      padding: 65px 20px;
+      padding: 75px 24px;
     }
 
-    .section h2 {
+    .section-title {
       text-align: center;
-      font-size: 32px;
       margin-bottom: 12px;
+      font-size: 34px;
     }
 
-    .intro {
+    .section-subtitle {
       text-align: center;
-      color: #626978;
+      color: #6b7280;
       max-width: 700px;
-      margin: 0 auto 40px;
+      margin: 0 auto 45px;
     }
 
-    .cards {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
     .card {
-      border: 1px solid #e3e5eb;
-      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
       padding: 28px;
       background: white;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.04);
     }
 
     .card h3 {
-      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 22px;
     }
 
-    .coming {
+    .card p {
+      color: #667085;
+      margin-bottom: 20px;
+    }
+
+    .tag {
       display: inline-block;
-      margin-top: 12px;
-      padding: 8px 13px;
-      background: #f0f1f5;
-      border-radius: 6px;
-      font-size: 14px;
+      background: #f0efff;
+      color: #554cf2;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
       font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .learn {
+      color: #635bff;
+      font-weight: 700;
+    }
+
+    .how {
+      background: #f8fafc;
+    }
+
+    .steps {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .step {
+      margin-bottom: 25px;
+      padding: 25px;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .step strong {
+      color: #635bff;
+    }
+
+    .disclosure {
+      max-width: 850px;
+      margin: auto;
+      padding: 25px;
+      background: #fffbea;
+      border: 1px solid #f1df99;
+      border-radius: 10px;
+      color: #665b30;
+      font-size: 14px;
     }
 
     footer {
-      border-top: 1px solid #e8e8e8;
-      padding: 35px 20px;
+      background: #111827;
+      color: #cbd5e1;
+      padding: 45px 24px;
       text-align: center;
-      color: #6c7280;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    footer p {
+      margin-top: 10px;
       font-size: 14px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
       .hero h1 {
-        font-size: 36px;
+        font-size: 38px;
+      }
+
+      nav {
+        display: none;
       }
     }
   </style>
@@ -117,64 +213,144 @@
 <body>
 
 <header>
-  AIBuilder<span>Search</span>
+  <div class="nav">
+    <div class="logo">AI Builder <span>Search</span></div>
+
+    <nav>
+      <a href="#tools">AI Tools</a>
+      <a href="#compare">Comparisons</a>
+      <a href="#about">About</a>
+      <a href="#disclosure">Disclosure</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
-  <h1>Find the Right AI Website Builder</h1>
+  <h1>Find the Right AI Tools to Build Your Business</h1>
 
   <p>
-    We research and compare AI website builders to help entrepreneurs,
-    small businesses and creators choose the right tool to build a website faster.
+    We research and compare AI website builders and online business tools
+    so entrepreneurs, creators and small businesses can choose with confidence.
   </p>
+
+  <a class="button" href="#tools">Explore AI Tools</a>
 </section>
 
-<section class="section">
+<section class="section" id="tools">
 
-  <h2>AI Website Builder Reviews & Comparisons</h2>
+  <h2 class="section-title">AI Website Builders We're Reviewing</h2>
 
-  <p class="intro">
-    AIBuilderSearch provides independent guides, comparisons and reviews
-    of AI-powered website creation tools.
+  <p class="section-subtitle">
+    Our goal is to make choosing an AI website builder easier by looking at
+    features, ease of use, pricing and the type of user each platform is built for.
   </p>
 
-  <div class="cards">
+  <div class="grid">
 
     <div class="card">
-      <h3>AI Website Builders</h3>
+      <span class="tag">AI WEBSITE BUILDER</span>
+      <h3>Webflow</h3>
       <p>
-        Discover AI tools that can generate websites, pages and business
-        content with less manual work.
+        A powerful website creation platform for businesses, designers and
+        professionals who want greater control over their websites.
       </p>
-      <span class="coming">Reviews coming soon</span>
+      <span class="learn">Full Review Coming Soon →</span>
     </div>
 
     <div class="card">
-      <h3>Compare AI Builders</h3>
+      <span class="tag">AI WEBSITE BUILDER</span>
+      <h3>Wix AI</h3>
       <p>
-        Compare features, pricing and use cases before deciding which
-        AI website builder is right for you.
+        An accessible website building platform combining AI-powered creation
+        tools with an established website ecosystem.
       </p>
-      <span class="coming">Comparisons coming soon</span>
+      <span class="learn">Full Review Coming Soon →</span>
     </div>
 
     <div class="card">
-      <h3>AI Website Creation Guides</h3>
+      <span class="tag">AI WEBSITE BUILDER</span>
+      <h3>Hostinger AI</h3>
       <p>
-        Learn how to create and launch websites using modern
-        AI website creation tools.
+        A website builder focused on quickly launching websites with AI-assisted
+        design, writing and online business features.
       </p>
-      <span class="coming">Guides coming soon</span>
+      <span class="learn">Full Review Coming Soon →</span>
     </div>
 
   </div>
 </section>
 
+<section class="section how" id="compare">
+
+  <h2 class="section-title">How We Compare AI Tools</h2>
+
+  <p class="section-subtitle">
+    AI Builder Search focuses on practical information that helps you decide
+    which platform fits your needs.
+  </p>
+
+  <div class="steps">
+
+    <div class="step">
+      <strong>01 — Ease of Use</strong>
+      <p>How quickly can a beginner understand the platform and launch something useful?</p>
+    </div>
+
+    <div class="step">
+      <strong>02 — AI Features</strong>
+      <p>We look at the AI features available and how they can help with website creation and everyday work.</p>
+    </div>
+
+    <div class="step">
+      <strong>03 — Pricing & Value</strong>
+      <p>We compare available plans, key limitations and the type of user each option may suit.</p>
+    </div>
+
+    <div class="step">
+      <strong>04 — Business Use</strong>
+      <p>We consider whether the platform is suitable for entrepreneurs, creators, freelancers and small businesses.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="about">
+
+  <h2 class="section-title">About AI Builder Search</h2>
+
+  <p class="section-subtitle">
+    AI Builder Search is an independent website created to research, compare
+    and explain AI-powered website builders and digital business tools.
+    Our aim is to make the rapidly growing AI software market easier to
+    understand for people building businesses online.
+  </p>
+
+</section>
+
+<section class="section" id="disclosure">
+
+  <div class="disclosure">
+    <strong>Affiliate Disclosure:</strong>
+    AI Builder Search may earn a commission when visitors purchase products
+    or services through certain links on this website. This does not increase
+    the price you pay. Affiliate relationships do not determine the information
+    we publish about a product.
+  </div>
+
+</section>
+
 <footer>
-  © 2026 AIBuilderSearch.com
-  <br><br>
-  AIBuilderSearch may earn commissions from qualifying purchases made
-  through links on this website.
+
+  <strong>AI Builder Search</strong>
+
+  <p>
+    Independent AI tool research, comparisons and guides.
+  </p>
+
+  <p>
+    © 2026 AI Builder Search. All rights reserved.
+  </p>
+
 </footer>
 
 </body>
